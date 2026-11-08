@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="com.htgndrk.iotsecur" />
+                  <option name="mobileSdkAppId" value="1:972834392848:android:b5507b4185c1f46bf63395" />
+                  <option name="projectId" value="iot-eva3-em" />
+                  <option name="projectNumber" value="972834392848" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
