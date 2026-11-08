@@ -1,2 +1,10 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
 include ':app'
-rootProject.name='Web services Sencillo'
+rootProject.name = 'Web services Sencillo'

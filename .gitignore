@@ -1,3 +1,28 @@
 # Project exclude paths
-/.gradle/
-/build/
+.gradle/
+build/
+app/build/
+
+# Local configuration (SDK paths)
+local.properties
+
+# Android Studio / IntelliJ IDEA
+*.iml
+.idea/caches/
+.idea/libraries/
+.idea/modules.xml
+.idea/workspace.xml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
+.idea/deploymentTargetSelector.xml
+
+# Build outputs & captures
+captures/
+.externalNativeBuild
+.cxx/
+*.apk
+*.aab
+
+# OS files
+.DS_Store
+Thumbs.db
