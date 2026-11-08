@@ -1,84 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="#F5F5F5">
 
-    <LinearLayout
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de Usuario"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crea una cuenta para gestionar la alarma"
+        android:textSize="14sp"
+        android:textColor="#666666"
+        android:layout_marginBottom="30dp" />
+
+    <EditText
+        android:id="@+id/etRegisterEmail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:layout_height="50dp"
+        android:hint="Correo electrónico"
+        android:inputType="textEmailAddress"
+        android:background="@android:drawable/editbox_background_normal"
+        android:padding="12dp"
+        android:layout_marginBottom="15dp" />
 
-        <TextView
-            android:id="@+id/txtTituloRegistro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="REGISTRO DE USUARIO"
-            android:textAlignment="center"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+    <EditText
+        android:id="@+id/etRegisterPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Contraseña (mínimo 6 caracteres)"
+        android:inputType="textPassword"
+        android:background="@android:drawable/editbox_background_normal"
+        android:padding="12dp"
+        android:layout_marginBottom="25dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="CORREO"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnConfirmarRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Crear Cuenta"
+        android:backgroundTint="#388E3C"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginBottom="15dp" />
 
-        <EditText
-            android:id="@+id/etRegistroCorreo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="INGRESE SU CORREO"
-            android:inputType="textEmailAddress"
-            android:textColor="@android:color/black" />
+    <Button
+        android:id="@+id/btnVolverLogin"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="Volver al Login"
+        android:backgroundTint="#757575"
+        android:textColor="#FFFFFF" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="CONTRASEÑA"
-            android:textColor="@android:color/black"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/etRegistroPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="INGRESE SU CONTRASEÑA (MÍNIMO 6 CARACTERES)"
-            android:inputType="textPassword"
-            android:textColor="@android:color/black" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="30dp">
-
-            <Button
-                android:id="@+id/btnConfirmarRegistro"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:backgroundTint="@android:color/holo_green_dark"
-                android:text="REGISTRAR" />
-
-            <Button
-                android:id="@+id/btnVolver"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:backgroundTint="@android:color/darker_gray"
-                android:text="VOLVER" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
