@@ -11,8 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText etCorreo, etPassword;
-    private Button btnIngresar, btnRegistrar, btnLimpiar;
+    private EditText etEmail, etPassword;
     private FirebaseAuth mAuth;
 
     @Override
@@ -22,10 +21,13 @@ public class MainActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        relacionarVistas();
+        etEmail = findViewById(R.id.etEmail);
+        etPassword = findViewById(R.id.etPassword);
+        Button btnLogin = findViewById(R.id.btnLogin);
+        Button btnRegistrar = findViewById(R.id.btnRegistrar);
 
-        btnIngresar.setOnClickListener(v -> {
-            String email = etCorreo.getText().toString().trim();
+        btnLogin.setOnClickListener(v -> {
+            String email = etEmail.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
             if (email.isEmpty() || password.isEmpty()) {
@@ -50,18 +52,5 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, RegisterActivity.class);
             startActivity(intent);
         });
-
-        btnLimpiar.setOnClickListener(v -> {
-            etCorreo.setText("");
-            etPassword.setText("");
-        });
-    }
-
-    private void relacionarVistas() {
-        etCorreo = findViewById(R.id.correo);
-        etPassword = findViewById(R.id.password);
-        btnIngresar = findViewById(R.id.acceso);
-        btnRegistrar = findViewById(R.id.btnRegistro);
-        btnLimpiar = findViewById(R.id.mostrar);
     }
 }

@@ -20,10 +20,10 @@ public class RegisterActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        etEmail = findViewById(R.id.etRegistroCorreo);
-        etPassword = findViewById(R.id.etRegistroPassword);
+        etEmail = findViewById(R.id.etRegisterEmail);
+        etPassword = findViewById(R.id.etRegisterPassword);
         Button btnRegistrar = findViewById(R.id.btnConfirmarRegistro);
-        Button btnVolver = findViewById(R.id.btnVolver);
+        Button btnVolver = findViewById(R.id.btnVolverLogin);
 
         btnRegistrar.setOnClickListener(v -> registrarUsuario());
         btnVolver.setOnClickListener(v -> finish());
